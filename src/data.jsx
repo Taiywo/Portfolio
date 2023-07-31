@@ -138,7 +138,7 @@ export const resume = [
     category: 'experience',
     icon: <FaBriefcase />,
     year: '2023 - PRESENT',
-    title: 'Web Developer Intership<span> Envato </span>',
+    title: 'Frontend Developer Intership<span> SAIL </span>',
     desc: 'Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,',
   },
 
@@ -147,7 +147,7 @@ export const resume = [
     category: 'experience',
     icon: <FaBriefcase />,
     year: '2019 - PRESENT',
-    title: 'Opreration Manager <span> Themeforest </span>',
+    title: 'Opreration Manager <span> Baudspace Warehouse LTD </span>',
     desc: 'Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt',
   },
 
@@ -155,8 +155,8 @@ export const resume = [
     id: 3,
     category: 'experience',
     icon: <FaBriefcase />,
-    year: '2005 - 2013',
-    title: 'Consultant <span> Videohive </span>',
+    year: '2019 - PRESENT',
+    title: 'FREELANCE',
     desc: 'Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt',
   },
 

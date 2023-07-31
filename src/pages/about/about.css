@@ -1,6 +1,7 @@
 .about__container,
 .info__list,
-.stats {
+.stats,
+.resume__container {
     grid-template-columns: repeat(2, 1fr);
 }
 
@@ -21,30 +22,31 @@
     font-size: var(--small-font-size);
 }
 
-.info__list .info__description{
+.info__list .info__description {
     color: var(--title-color);
     font-weight: var(--weight-600);
 }
 
-.stats__box{
+.stats__box {
     border: 1px solid var(--border-color);
     padding: 20px 30px 25px;
     border-radius: 5px;
 }
-.stats__no{
-    color:var(--first-color);
+
+.stats__no {
+    color: var(--first-color);
     font-size: var(--h1-font-size);
     line-height: 1.2;
 }
 
-.stats__title{
+.stats__title {
     font-size: var(--small-font-size);
     line-height: 1.6;
     padding-left: 45px;
     position: relative;
 }
 
-.stats__title::before{
+.stats__title::before {
     content: "";
     position: absolute;
     left: 0;
@@ -55,24 +57,25 @@
 }
 
 
-.separator{
+.separator {
     border-top: 1px solid var(--border-color);
     max-width: 40%;
     margin: 72px auto 56px;
-    
+
 }
 
-.subtitle__center{
- text-align: center;
- margin-bottom: 50px;
+.subtitle__center {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.skills__container{
-    grid-template-columns: repeat(4,1fr);
+.skills__container {
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 48px;
     justify-items: center;
 }
-.progress__circle{
+
+.progress__circle {
     width: 120px;
     height: 120px;
 }
@@ -82,18 +85,53 @@
     stroke: var(--first-color) !important;
     stroke-linecap: butt;
 }
-.CircularProgressbar-trail{
+
+.CircularProgressbar-trail {
     stroke: var(--container-color) !important;
 }
-.CircularProgressbar-text{
+
+.CircularProgressbar-text {
     fill: var(--title-color) !important;
     font-family: var(--second-font);
     font-size: var(--large-font-size) !important;
 }
-.skills__title{
+
+.skills__title {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     font-weight: var(--weight-400);
     text-align: center;
     margin-top: 24px;
+}
+
+.resume__item {
+    position: relative;
+    padding-left: 60px;
+}
+
+.resume__item {
+    margin-bottom: 50px;
+}
+
+.resume__item::before {
+    content: '';
+    position: absolute;
+    left: 1.2rem;
+    inset-block: 0;
+    border-left: 1px solid var(--border-color);
+}
+
+.resume__icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--first-color);
+    color: var(--text-white);
+    width: 40px;
+    height: 40px;
+    padding: 12px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+   
 }
