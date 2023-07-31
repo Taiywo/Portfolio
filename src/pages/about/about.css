@@ -135,3 +135,29 @@
     line-height: 40px;
    
 }
+.resume__date{
+    background-color: var(--container-color);
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: var(--tiny-font-size);
+    font-weight: var(--weight-600);
+}
+.resume__subtitle{
+    font-size: var(--large-font-size);
+    font-weight: var(--weight-600);
+    position: relative;
+    padding-left: 26px;
+}
+.resume__container span::before{
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 9px;
+    width: 10px;
+    height: 2px;
+    background-color: var(--text-color);
+}
+.resume__description{
+    font-size: var(--smaller-font-size);
+    line-height: 1.6;
+}

@@ -156,7 +156,7 @@ export const resume = [
     category: 'experience',
     icon: <FaBriefcase />,
     year: '2019 - PRESENT',
-    title: 'FREELANCE',
+    title: '<span>FREELANCE </span>',
     desc: 'Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt',
   },
 
