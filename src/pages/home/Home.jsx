@@ -12,8 +12,8 @@ const Home = () => {
       <div className="home__content">
         <div className="home__data">
           <h1 className="home__title"><span> I'm Kareem Taiwo. </span>Sofware Developer </h1>
-          <p className='home__description'>I'm a Nigerian based front-end developer passionate about builing
-            excellent software that improves the lives of those arround me.</p>
+          <p className='home__description'>I'm a Nigerian based front-end developer passionate about building
+            excellent software that improves the lives of those around me.</p>
           <Link to='/about' className='button'> More About Me {' '} <span  className='button__icon'> <FaArrowRight/></span>
           </Link>
         </div>
