@@ -1,9 +1,6 @@
 .portfolio__container {
     grid-template-columns: repeat(3, 1fr);
 }
-.section{
-    z-index: 4;
-}
 
 .portfolio__item {
     position: relative;
@@ -112,9 +109,9 @@
     }
     
 }
-@media screen and (min-width:1024px) {
+/* @media screen and (min-width:1024px) {
     .portfolio__container {
        padding:6rem ;
     }
     
-}
+} */
