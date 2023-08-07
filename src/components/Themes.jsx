@@ -7,21 +7,36 @@ import './theme.css'
 
 
 
-
+const getLocalStorage = () => {
+    let color = "hsl(252,35%,51%"
+    if (localStorage.getItem('color')) {
+        color = localStorage.getItem('color')
+    }
+    return color
+}
 
 
 const Themes = () => {
     const [showSwitcher, setShowSwitcher] = useState(true)
 
-    const [color, setColor] = useState("red")
+    const [color, setColor] = useState(getLocalStorage())
+    const [mode, setMode] = useState('light-mode')
 
     const changeColor = (color) => {
         setColor(color)
     }
-   
+    const changeMode = () => {
+        if (mode === 'light-mode') {
+            setMode('light-mode')
+        }
+        else setMode('dark-mode')
+    }
+
+
     useEffect(() => {
         document.documentElement.style.setProperty('--first-color', color)
-          
+        localStorage.setItem('color', color)
+
     }, [color])
 
 
@@ -34,8 +49,8 @@ const Themes = () => {
                 <div className="style__switcher-toggler" onClick={(() => setShowSwitcher(!showSwitcher))}  >
                     <FaCog />
                 </div>
-                <div className="theme__toggle">
-                    <BsMoon />
+                <div className="theme__toggle" onClick={(() => changeMode(!mode))}>
+                    {mode ? <BsMoon /> : <BsSun />}
                 </div>
                 <h3 className="style__switcher-title">Style Switcher</h3>
                 <div className="style__switcher-items">
