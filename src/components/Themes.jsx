@@ -14,22 +14,29 @@ const getLocalStorage = () => {
     }
     return color
 }
+const getLocalModeStorage = () => {
+    let theme = "light-mode"
+    if (localStorage.getItem('mode')) {
+       theme = localStorage.getItem('mode')
+    }
+    return  theme
+}
 
 
 const Themes = () => {
-    const [showSwitcher, setShowSwitcher] = useState(true)
+    const [showSwitcher, setShowSwitcher] = useState(false)
 
     const [color, setColor] = useState(getLocalStorage())
-    const [mode, setMode] = useState('light-mode')
+    const [mode, setMode] = useState(getLocalModeStorage ())
 
     const changeColor = (color) => {
         setColor(color)
     }
     const changeMode = () => {
         if (mode === 'light-mode') {
-            setMode('light-mode')
+            setMode('dark-mode')
         }
-        else setMode('dark-mode')
+        else setMode('light-mode')
     }
 
 
@@ -38,6 +45,12 @@ const Themes = () => {
         localStorage.setItem('color', color)
 
     }, [color])
+
+    useEffect(() => {
+        document.documentElement.className = mode
+        localStorage.setItem('mode', mode)
+
+    }, [mode])
 
 
 
@@ -49,8 +62,8 @@ const Themes = () => {
                 <div className="style__switcher-toggler" onClick={(() => setShowSwitcher(!showSwitcher))}  >
                     <FaCog />
                 </div>
-                <div className="theme__toggle" onClick={(() => changeMode(!mode))}>
-                    {mode ? <BsMoon /> : <BsSun />}
+                <div className="theme__toggle" onClick={ changeMode}>
+                    {mode === 'light-mode'? <BsMoon /> : <BsSun />}
                 </div>
                 <h3 className="style__switcher-title">Style Switcher</h3>
                 <div className="style__switcher-items">

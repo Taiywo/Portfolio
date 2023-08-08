@@ -35,6 +35,15 @@
     --weight-700: 700;
     --weight-800: 800;
 }
+.dark-mode{
+    --title-color: hsl(0, 0%, 100%);
+    --text-color: hsl(0, 0%, 80%);
+    --border-color: hsl(0, 0%,15%);
+    --container-color: hsl(0, 1%, 17%);
+    --body-color: hsl(0, 0%, 7%);
+ 
+}
+
 
 * {
     margin: 0;
