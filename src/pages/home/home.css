@@ -51,3 +51,24 @@ color: var(--first-color);
     transform: rotate(-15deg);
     z-index: -1;
 }
+
+@media screen and (max-width:375px) {
+
+.home{
+  display: flex;
+    flex-direction: row;
+    background-color: blue;
+    padding: 40px;
+ 
+}
+
+.home__img{
+    height:10rem;
+    width: 40rem;
+    object-fit: cover;
+    border-radius:30px;
+    box-shadow: 0 0 8px hsla(0, 0%, 0%, 0.3);
+   
+}
+
+}
